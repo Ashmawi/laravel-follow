@@ -1,0 +1,26 @@
+{
+   "name": "ashmawi/laravel-follow",
+   "description": "User follow unfollow system for Laravel.",
+   "type": "library",
+   "license": "MIT",
+   "authors": [
+      {
+         "name": "Ashmawi Sami",
+         "email": "ashmawi.sa@gmail.com"
+      }
+   ],
+   "minimum-stability": "dev",
+   "require": {},
+   "autoload": {
+      "psr-4": {
+         "Ashmawi\\LaravelFollow\\": "src"
+      }
+   },
+   "extra": {
+      "laravel": {
+         "providers": [
+            "Ashmawi\\LaravelFollow\\FollowServiceProvider"
+         ]
+      }
+   }
+}
