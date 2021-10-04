@@ -21,10 +21,10 @@ trait Followable {
    }
 
    public function isFollowing(User $user) {
-      return $this->following()->where('users.id', $user->id)->exists();
+      return $this->followings()->where('users.id', $user->id)->exists();
    }
 
-   public function following() {
+   public function followings() {
       return $this->hasManyThrough(User::class, UserFollow::class, 'user_id', 'id', 'id', 'following_id');
    }
 
