@@ -12,7 +12,7 @@ class CreateUserFollowsTable extends Migration
     {
         return config('follow.table_name');
     }
-    
+
     // Get a user model key name.
     private function userKeyName()
     {
@@ -26,22 +26,6 @@ class CreateUserFollowsTable extends Migration
         $userModel = config('follow.user');
         return (new $userModel)->getTable();
     }
-
-
-    // /**
-    //  * Run the migrations.
-    //  *
-    //  * @return void
-    //  */
-    // public function up()
-    // {
-    //     Schema::create('user_follows', function (Blueprint $table) {
-    //         $table->id();
-    //         $table->foreignId('user_id')->constrained()->onDelete('cascade');
-    //         $table->foreignId('following_id')->constrained('users')->onDelete('cascade');
-    //         $table->timestamps();
-    //     });
-    // }
 
     public function up()
     {
